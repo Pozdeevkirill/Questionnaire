@@ -1,0 +1,371 @@
+﻿@model AnswerViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2 class="justify-content-center text-center mt-4 mb-5" style="color: #e04a73">АУДИТ</h2>
+
+<form action="/" method="post" class="justify-content-center">
+    <h1>ЗНАКОМСТВО</h1>
+    <p style="color: #AAB0B7">Давайте познакомимся. Расскажите, чем занимаетесь, а так же что ждете от разбора?</br> Смысл этого блока: узнать базовую информацию о тебе, чтобы понять, какие действия могут вам помочь.</p>
+    <div class="row justify-content-center">
+        <div class="col border-white">
+            @*Name*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Имя Фамилия</label>
+                    <div class="col col-lg-6">
+                        <input asp-for="Name" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*Phone*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Телефон для связи</label>
+                    <div class="col col-lg-6">
+                        <input asp-for="Phone" type="text" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*Email*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">E-mail</label>
+                    <div class="col col-lg-6">
+                        <input asp-for="Email" type="email" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*City*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Страна, Город</label>
+                    <div class="col col-lg-6">
+                        <input asp-for="City" type="text" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*City*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Ваша деятельность</label>
+                    <div class="col col-lg-6">
+                        <input asp-for="Activity" type="text" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="Activity" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*City*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Среднемесячный доход</label>
+                    <div class="col col-lg-6">
+                        <input asp-for="AVGIncome" type="text" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="AVGIncome" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*City*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Что будет для вас наилучшим результатом после прохождения разбора?</label>
+                    <div class="col col-lg-6">
+                        <input asp-for="BestResult" type="text" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="BestResult" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*City*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Назовите свою основную трудность на данный момент</label>
+                    <div class="col col-lg-6">
+                        <input asp-for="Difficulty" type="text" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="Difficulty" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*City*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Ваши вопросы</label>
+                    <div class="col col-lg-6">
+                        <input asp-for="Questions" type="text" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="Questions" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*City*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Укажите Instagram</label>
+                    <div class="col col-lg-6">
+                        <input asp-for="Instagram" type="text" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="Instagram" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*City*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Ваш сайт</label>
+                    <div class="col col-lg-6">
+                        <input asp-for="Site" type="text" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="Site" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1>ТОЧКИ А-Б</h1>
+    <p style="color: #AAB0B7">Смысл этого блока: узнать текущий доход и выстроить понимание к какому доходу стремиться.</p>
+    <div class="row justify-content-center">
+        <div class="col border-white">
+            @*Name*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Точка А. Какой средний доход в месяц сейчас?</label>
+                    <div class="col col-lg-6">
+                        <input asp-for="PointA" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="PointA" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*Name*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Точка Б. К какому дохудо хочешь прийти? (В т.ч 3 мес)</label>
+                    <div class="col col-lg-6 ">
+                        <input asp-for="PointB" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="PointB" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <p style="font-size:">Какие гипотезы по достижению есть сейчас?</p>
+            @*Name*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Гипотеза № 1</label>
+                    <div class="col col-lg-6 ">
+                        <input asp-for="Hypothesis1" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="Hypothesis1" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*Name*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Гипотеза № 2</label>
+                    <div class="col col-lg-6 ">
+                        <input asp-for="Hypothesis2" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="Hypothesis2" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*Name*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Гипотеза № 3</label>
+                    <div class="col col-lg-6 ">
+                        <input asp-for="Hypothesis3" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="Hypothesis3" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*Name*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Гипотеза № 4</label>
+                    <div class="col col-lg-6 ">
+                        <input asp-for="Hypothesis4" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="Hypothesis4" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*Name*@
+            <div class="card-header cardHeaderStyle text-center">
+                <div class="form-group row">
+                    <label class="col col-lg-4 col-form-label text-left control-label">Гипотеза № 5</label>
+                    <div class="col col-lg-6 ">
+                        <input asp-for="Hypothesis5" class="form-control shadow-none" style="background-color: #171424; color: white; border-color: #171424; border-bottom-color: #e04a73;" placeholder="Ваш ответ" />
+                        <span asp-validation-for="Hypothesis5" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1>АНАЛИЗ УПАКОВКИ, МАРКЕТИНГА И ПРОДАЖ</h1>
+    <p style="color: #AAB0B7">Смысл этого блока: детально оценить твой уровень упаковки, маркетинга и продаж, чтобы понять где есть просадки и что можно улучшить.</p>
+    <h1 class="mt-4 mb-4">УПАКОВКА</h1>
+    <div class="row justify-content-center ml-4">
+        <div class="col border-white">
+            <div class="form-check">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="first" value="1">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    У меня упакованная шапка профиля в Instagram. По ней понятно чем я занимаюсь и чем могу быть полезен(а). Есть увеличенная кнопка подписки и доп.описание в адресе.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="first" value="2">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Мои хайлайтс оформленны в едином стиле и есть основные рубрики. Кейсы, отзывы, продукты, бесплатные материалы и другие.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="first" value="3">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    У моей ленты есть единый стиль, я использую бесшовные карусели для контентных постов. Я использую надписи на фото для навигации подписчиков.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="first" value="4">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    У меня нет трудностей  с написанием постов. Я знаю как искать темы для постов, как правильно строить структуры написания и как вовлекать аудиторию.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="first" value="5">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    У меня есть фирменный стиль сторис и шаблоны под все рубрики.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="first" value="6">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    У меня есть контент план для сторис и ленты, где регулярно выходит контент.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="first" value="7">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    У меня есть главная страница сайта с описанием всех услуг, кейсов и другими материалами.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="first" value="8">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    У меня есть упокованные кейсы на сайте. Я описываю каждый кейс и публикую в виде страниц на сайте. Есть четкая структура описания кейсов по которой их собираю.
+                </label>
+            </div>
+            <span asp-validation-for="First" class="text-danger"></span>
+        </div>
+        <span class="text-danger"></span>
+    </div>
+    <h1 class="mt-4 mb-4">МАРКЕТИНГ</h1>
+    <div class="row justify-content-center ml-4 ">
+        <div class="col border-white">
+            <div class="form-check">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="second" value="1">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    У меня упакованная шапка профиля в Instagram. По ней понятно чем я занимаюсь и чем могу быть полезен(а). Есть увеличенная кнопка подписки и доп.описание в адресе.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="second" value="2">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    Я привлекаю подписчиков в Instagram через торгетерованную рекламу и рекламу у блогеров.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="second" value="3">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    У меня есть автоворонка продаж в мессенджерах, которую я использую для основного привлечения клиентов.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="second" value="4">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    Я провожу вебинары, знаю как собирать продающие презентации и вебинарные воронки.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="second" value="5">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    Я знаю свою целевую аудиторию и смыслы о моем бренде.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="second" value="6">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    Я провожу запуски в Instagram своих продуктов и услуг.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="second" value="7">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    У меня есть рекламные креативы для торгетированной рекламы с высокими показателями CTR.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="second" value="8">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    Я работаю с реторгетингом через тарегтированную рекламу в Facebook и Instagram.
+                </label>
+            </div>
+            <span asp-validation-for="Second" class="text-danger"></span>
+        </div>
+    </div>
+    <h1 class="mt-4 mb-4">ПРОДАЖИ</h1>
+    <div class="row justify-content-center row ml-4">
+        <div class="col border-white">
+            <div class="form-check">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="thrid" value="1">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    У меня есть система для учета клиентов.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="thrid" value="2">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    У меня есть скрипты продаж.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="thrid" value="3">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    У меня есть продуктовая матрица и механики продаж.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="thrid" value="4">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    Я использую рассрочки для клиентов.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="thrid" value="5">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    У меня есть продукт для ключевого этапа ворнки продаж.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="thrid" value="6">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    У меня есть опыт продаж по телефону и в переписке.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="thrid" value="7">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    У меня есть трипоаер для продажи на входе в воронку.
+                </label>
+            </div>
+            <div class="form-check mt-4">
+                <input class="form-check-input" style="background-color: #171424; color: #e04a73" type="radio" name="thrid" value="8">
+                <label class="form-check-label font-weight-lighter" for="flexRadioDefault1">
+                    Я работаю с реторгетингом через тарегтированную рекламу в Facebook и Instagram.
+                </label>
+            </div>
+            <span asp-validation-for="Thrid" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="text-center mt-5">
+        <button type="submit" class="btn btn-danger m-1 buttonShadow border-0" style="background-color: #e04a73">Отправить</button>
+    </div>
+</form>
+
